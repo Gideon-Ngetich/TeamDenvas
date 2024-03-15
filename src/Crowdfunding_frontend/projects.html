@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Charity | Projects</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo-section" class="nav-section">
+          <a href="#">
+            <i class="fa-solid fa-dumpster-fire"></i>
+          </a>
+        </div>
+        <div id="nav-mobile-section">
+          <div id="nav-link-section" class="nav-section">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="donate.html">Donate </a>
+          </div>
+          </div>
+        </div>
+      
+ <div class="project">
+    <h2>Project 1: Solar-Powered Backpacks</h2>
+    <img src="backpack.jpeg" alt="Project 1">
+    <p>Revolutionary solar-powered backpacks that charge your devices on the go. Perfect for outdoor enthusiasts and travelers.</p>
+    <p>Target Amount: $5000</p>
+    <p>Current Funded: $2500</p>
+    <button class="donate-btn">Donate</button>
+  </div>
+  <div class="project">
+    <h2>Project 2: Community Garden Initiative</h2>
+    <img src="community.jpeg" alt="Project 2">
+    <p>Empowering communities by creating sustainable green spaces for urban gardening, education, and food security.</p>
+    <p>Target Amount: $7000</p>
+    <p>Current Funded: $3500</p>
+    <button class="donate-btn">Donate</button>
+  </div>
+  <div class="project">
+    <h2>Project 3: Clean Water for All</h2>
+    <img src="water.jpeg" alt="Project 3">
+    <p>Providing access to clean and safe drinking water to underserved communities around the world.</p>
+    <p>Target Amount: $10000</p>
+    <p>Current Funded: $6000</p>
+    <button class="donate-btn">Donate</button>
+  </div>
+  <div class="project">
+    <h2>Project 4: Coding Bootcamp Scholarships</h2>
+    <img src="code.jpeg" alt="Project 4">
+    <p>Supporting aspiring software developers from underrepresented backgrounds by providing scholarships for coding bootcamps.</p>
+    <p>Target Amount: $12000</p>
+    <p>Current Funded: $8000</p>
+    <button class="donate-btn">Donate</button>
+  </div>
+  <div class="project">
+    <h2>Project 5: Wildlife Conservation Expedition</h2>
+    <img src="wild.jpeg" alt="Project 5">
+    <p>Join us on an exciting expedition to conserve endangered species and their habitats in remote wilderness areas.</p>
+    <p>Target Amount: $15000</p>
+    <p>Current Funded: $10000</p>
+    <button class="donate-btn">Donate</button>
+</body>
+<script>
+    // Add event listener to all elements with the class "donate-btn"
+    document.querySelectorAll('.donate-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            // Redirect the user to the donate page
+            window.location.href = "donate.html";
+        });
+    });
+</script>
+</html>

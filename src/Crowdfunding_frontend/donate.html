@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Charity | Donate</title>
+    <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="donate">
+        <div class="container">
+            <h2>Crowdfunding</h2>
+            <p>Your contribution can make a significant impact on the listed startups. Thank you for your generosity!</p>
+            <form id="donation-form" action="/donate" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="amount">Crowdfunding amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter the donation amount" required>
+                <label for="message">Leave a Message (Optional)</label>
+                <textarea id="message" name="message" placeholder="Leave a message for the charity"></textarea>
+                <button type="submit" class="btn-donate">Donate Now</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Crowdfunding. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('donation-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Send form data to backend
+            try {
+                const response = await fetch('http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=be2us-64aaa-aaaaa-qaabq-cai', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    // Redirect to success page if the request was successful
+                    window.location.href = 'popup.html';
+                } else {
+                    // Handle errors
+                    console.error('Error:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
